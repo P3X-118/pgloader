@@ -50,4 +50,4 @@ FROM debian:bookworm-slim
 
   ADD conf/freetds.conf /etc/freetds/freetds.conf
 
-  LABEL maintainer="Dimitri Fontaine <dim@tapoueh.org>"
+  LABEL maintainer="Oneill"
