@@ -98,3 +98,33 @@ each commit to the master branch:
 
     $ docker pull ghcr.io/dimitri/pgloader:latest
     $ docker run --rm -it ghcr.io/dimitri/pgloader:latest pgloader --version
+
+## Building
+
+pgloader is built using [just](https://just.systems/). Run `just` or `just all`
+to build pgloader:
+
+    $ just
+
+List all available recipes:
+
+    $ just --list
+
+### Common Recipes
+
+| Recipe | Description |
+|--------|-------------|
+| `just` or `just all` | Build pgloader (default) |
+| `just pgloader` | Build the pgloader binary |
+| `just test` | Run the test suite |
+| `just clean` | Clean build artifacts |
+| `just docker` | Build Docker image |
+| `just docker-push` | Build and push Docker image to registry |
+| `just quicklisp` | Setup Quicklisp dependencies |
+| `just clones` | Clone required Lisp libraries |
+
+### Docker
+
+Build and push the Docker image:
+
+    $ just docker-push
